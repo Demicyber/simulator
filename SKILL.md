@@ -307,6 +307,19 @@ User:数据来源是...
 
 ---
 
+## Workshop 模式
+
+Workshop 场景下，facilitator 会给用户发前情卡，然后用指令触发 Agent 进入对应 activity。Agent 读取对应 reference 文件，按里面的「Agent 执行流程」执行，**不走常规三阶段的 Phase 1 预热**（前情卡已由 facilitator 发出）。
+
+| 触发指令 | 读取 | 执行 |
+|---|---|---|
+| `EIP Activity 2` | `references/eip-activity-2.md` | 按该文件的 Agent 执行流程 |
+| `EIP Activity 3a` | `references/eip-activity-3a.md` | 按该文件的 Agent 执行流程 |
+
+> Agent 收到触发指令后，不需要额外确认场景/难度/目标等参数（这些已在 reference 文件里写死）。直接读文件、执行流程。
+
+---
+
 ## 触发与结束
 
 ### 触发方式
